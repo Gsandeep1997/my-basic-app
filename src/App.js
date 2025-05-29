@@ -1,13 +1,17 @@
 import React from 'react';
-import './App.css';
+import ReactDOM from 'react-dom/client';
 
-function App() {
+function MyForm() {
   return (
-    <div className="App">
-      <h1>Welcome to My React App</h1>
-      <p>This is a clean and minimal setup.</p>
-    </div>
-  );
+    <form>
+      <label>Enter your name:
+        <input type="text" />
+      </label>
+    </form>
+  )
 }
+
+const root = ReactDOM.createRoot(document.getElementById('root'));
+root.render(<MyForm />);
 
 export default App;
